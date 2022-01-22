@@ -9,6 +9,7 @@ const AutoPilot = () => {
     const dispatch = useDispatch();
 
     const countryList = useSelector((state:RootStateOrAny) => state.autoPilot.countryList);
+    const countryListLoading = useSelector((state:RootStateOrAny) => state.autoPilot.countryListLoading);
 
 
     useEffect(() => {
@@ -25,6 +26,7 @@ const AutoPilot = () => {
                         pngUrl: item.flag
                     }
                 })}
+                loading={countryListLoading}
             />
         </Container>
     );

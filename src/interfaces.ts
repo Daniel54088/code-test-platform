@@ -26,5 +26,6 @@ export interface CountryListObjectInterface {
 
 
 export interface SelectProps{
-    data: Object[]
+    data: Object[],
+    loading: boolean
 }
