@@ -1,7 +1,7 @@
 import Layout from "./layout/index";
-import { Route, Switch, Redirect } from 'react-router-dom';
-import Login from './containers/Login';
+import { Route, Switch } from 'react-router-dom';
 import Home from './containers/Home';
+import AutoPilot from './containers/AutoPilot';
 
 export default function AppRouters() {
 
@@ -10,7 +10,7 @@ export default function AppRouters() {
       <Layout>
         <Switch>
           <Route exact path="/" render={() => <Home />} />
-          <Route exact path="login" />
+          <Route exact path="/auto-pilot"  render={() => <AutoPilot />}/>
 
         </Switch>
       </Layout>

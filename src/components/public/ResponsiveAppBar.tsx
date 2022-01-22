@@ -11,7 +11,6 @@ import Tooltip from "@mui/material/Tooltip";
 import MenuItem from "@mui/material/MenuItem";
 import styles from "../../styles/ResponsiveAppBar.module.css";
 import { useHistory } from 'react-router-dom';
-import CloudUploadIcon from '@mui/icons-material/CloudUpload';
 import CastForEducationIcon from '@mui/icons-material/CastForEducation';
 
 const pages = [
@@ -72,7 +71,7 @@ const ResponsiveAppBar = () => {
              color: '#FF856D',
              fontWeight: 600,
              lineHeight: '25px'
-           }}>Daniel-code-platform</span>
+           }}>Daniel/Code/Platform</span>
           </Typography>
 
           <Box sx={{ flexGrow: 1, display: { xs: "flex", md: "none" } }}>
