@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
+import CircularProgress from '@mui/material/CircularProgress';
 import { CaptionProps, ListProps, SelectOption } from '../interfaces';
 import { SelectProps } from '../interfaces';
 
@@ -73,7 +74,7 @@ const Select: React.FC<SelectProps> = (props) => {
                                 ) :
                                     (
                                         <SelectedOption>
-                                            <span style={{ paddingRight: '1rem' }}>{selectedItem.pngUrl}</span> 
+                                            <span style={{ paddingRight: '1rem' }}>{selectedItem.pngUrl}</span>
                                             <ItemText>{selectedItem.label}</ItemText>
                                         </SelectedOption>
                                     )}
@@ -88,13 +89,20 @@ const Select: React.FC<SelectProps> = (props) => {
             </SelectContainer>
 
             <List isFocus={isfocus}>
-                {data.map((item: any, idx) =>
-                     <Item key={idx} 
-                     onMouseDown={() => handleOptionClick(item)}>
-                        <span style={{ paddingRight: '1rem' }}>{item.pngUrl}</span> 
-                        <ItemText>{item.label}</ItemText>
-                    </Item>
-                )}
+                {
+                    props.loading
+                        ? (
+                            <SpinnerBox>
+                                <CircularProgress />
+                            </SpinnerBox>
+                        )
+                        : data.map((item: any, idx) =>
+                            <Item key={idx}
+                                onMouseDown={() => handleOptionClick(item)}>
+                                <span style={{ paddingRight: '1rem' }}>{item.pngUrl}</span>
+                                <ItemText>{item.label}</ItemText>
+                            </Item>
+                        )}
 
             </List>
         </OuterContainer>
@@ -184,4 +192,15 @@ const SelectedOption = styled.div`
     font-weight: 500;
     font-size: 15px;
     line-height: 22px;  
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+`;
+
+
+const SpinnerBox = styled.div`
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 200px;
 `;
