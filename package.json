@@ -1,5 +1,5 @@
 {
-  "name": "react-initial",
+  "name": "daniel-code-platform",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -29,7 +29,8 @@
     "yarn": "^1.22.17",
     "rxjs": "7.5.2",
     "redux-observable": "2.0.0",
-    "redux": "^4.0.0"
+    "redux": "^4.0.0",
+    "react-redux": "7.2.6"
   },
   "resolutions": {
     "styled-components": "^5"

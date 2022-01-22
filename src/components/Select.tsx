@@ -1,24 +1,14 @@
 import React, { useEffect, useState } from 'react';
 import styled from 'styled-components';
 import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
-import { CaptionProps, ListProps, SelectOption, SelectItem } from '../interfaces';
+import { CaptionProps, ListProps, SelectOption } from '../interfaces';
+import { SelectProps } from '../interfaces';
 
 
-const initData = [
-    {
-        label: 'option 1'
-    },
-    {
-        label: 'option 2'
-    },
-    {
-        label: 'option 3'
-    }
-]
 
-const Select = () => {
-
-    const [data, setData] = useState<SelectOption[]>(initData);
+const Select: React.FC<SelectProps> = (props) => {
+    console.log(props)
+    const [data, setData] = useState<Object[]>(props.data);
 
     const [isfocus, setIsfocus] = useState(false);
     const [typeText, setTypeText] = useState('');
@@ -29,25 +19,25 @@ const Select = () => {
     }
 
 
-    useEffect(()=>{
+    useEffect(() => {
+        setData(props.data)
+    }, [props.data]);
 
-    },[data]);
-
-    const customFilter = (option:SelectOption, searchText:string) =>{
+    const customFilter = (option: { label: String }, searchText: string) => {
         if (
-          option.label.toLowerCase().includes(searchText.toLowerCase()) ) {
-          return true;
+            option.label.toLowerCase().includes(searchText.toLowerCase())) {
+            return true;
         } else {
-          return false;
+            return false;
         }
-      }
+    }
 
     const filterDataList = (value: string) => {
 
         setTypeText(value);
 
-        let filteredData = initData.filter(item => {
-            return customFilter(item,value);
+        let filteredData = props.data.filter((item: any) => {
+            return customFilter(item, value);
         })
 
         setData(filteredData);
@@ -56,8 +46,10 @@ const Select = () => {
     const handleOptionClick = (option: any) => {
         setSelectedItem(option);
         setIsfocus(false);
-        setData(initData);
+        setData(props.data);
     }
+
+    console.log(data)
 
     return (
         <OuterContainer >
@@ -68,7 +60,7 @@ const Select = () => {
                 onBlur={() => {
                     console.log('thisone')
                     setIsfocus(false);
-                    setData(initData);
+                    setData(props.data);
                 }}
             >
                 <Dropdown>
@@ -85,9 +77,12 @@ const Select = () => {
                                         Select
                                     </UnFocusText>
                                 ) :
-                                (
-                                    <SelectedOption>{selectedItem.label} </SelectedOption>
-                                )}
+                                    (
+                                        <SelectedOption>
+                                            <span style={{ paddingRight: '1rem' }}>{selectedItem.pngUrl}</span> 
+                                            <ItemText>{selectedItem.label}</ItemText>
+                                        </SelectedOption>
+                                    )}
                             </React.Fragment>
                         )}
 
@@ -97,9 +92,15 @@ const Select = () => {
                 </Dropdown>
 
             </SelectContainer>
-                
+
             <List isFocus={isfocus}>
-                {data.map((item, idx) => <Item key={idx} onMouseDown={() => handleOptionClick(item)}>{item.label}</Item>)}
+                {data.map((item: any, idx) =>
+                     <Item key={idx} 
+                     onMouseDown={() => handleOptionClick(item)}>
+                        <span style={{ paddingRight: '1rem' }}>{item.pngUrl}</span> 
+                        <ItemText>{item.label}</ItemText>
+                    </Item>
+                )}
 
             </List>
         </OuterContainer>
@@ -111,12 +112,12 @@ export default Select;
 const OuterContainer = styled.div`
     display: flex; 
     flex-direction: column;  
-    height: 200px;
 `;
 
 const SelectContainer = styled.div`
     width: 260px;
     background-color: transparent;
+    magin-top: 8rem;
 `;
 
 const Dropdown = styled.div`
@@ -160,6 +161,8 @@ const List = styled.div<ListProps>`
     box-shadow: 0 1px 24px 4px rgb(0 0 0 / 13%);
     padding-top: 10px;
     padding-bottom: 10px;
+    max-height: 242px;
+    overflow:auto;
 `;
 
 const Item = styled.div.attrs<any>(props => ({
@@ -167,12 +170,20 @@ const Item = styled.div.attrs<any>(props => ({
 }))`
     padding: 11px 24px;
     cursor: pointer;
+    width: 215px;
+    display: flex;
     &:hover {
         background-color : #f5f5f5;
         color: #6200EE;
     }
 `;
 
+const ItemText = styled.span`
+    text-overflow:ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    line-height: 23px
+`;
 
 const SelectedOption = styled.div`
     width: 100%;

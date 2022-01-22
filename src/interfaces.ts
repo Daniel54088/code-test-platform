@@ -12,11 +12,19 @@ export interface ListProps {
     isFocus: boolean
 }
 
-export interface SelectItem {
-    value: string
-}
-
 export interface SelectOption {
-    label: string
+    label: string,
+    pngUrl: string,
 }
 
+
+export interface CountryListObjectInterface {
+    name: { common : string},
+    value: { common : string},
+    flag: string
+}
+
+
+export interface SelectProps{
+    data: Object[]
+}
