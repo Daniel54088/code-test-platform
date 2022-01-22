@@ -5,13 +5,11 @@ import { CaptionProps, ListProps, SelectOption } from '../interfaces';
 import { SelectProps } from '../interfaces';
 
 
-
 const Select: React.FC<SelectProps> = (props) => {
-    console.log(props)
+
     const [data, setData] = useState<Object[]>(props.data);
 
     const [isfocus, setIsfocus] = useState(false);
-    const [typeText, setTypeText] = useState('');
     const [selectedItem, setSelectedItem] = useState<SelectOption | null>(null);
 
     const handleSelectClick = () => {
@@ -34,8 +32,6 @@ const Select: React.FC<SelectProps> = (props) => {
 
     const filterDataList = (value: string) => {
 
-        setTypeText(value);
-
         let filteredData = props.data.filter((item: any) => {
             return customFilter(item, value);
         })
@@ -49,7 +45,6 @@ const Select: React.FC<SelectProps> = (props) => {
         setData(props.data);
     }
 
-    console.log(data)
 
     return (
         <OuterContainer >
@@ -58,7 +53,6 @@ const Select: React.FC<SelectProps> = (props) => {
                 onClick={handleSelectClick}
                 onFocus={() => setIsfocus(true)}
                 onBlur={() => {
-                    console.log('thisone')
                     setIsfocus(false);
                     setData(props.data);
                 }}
