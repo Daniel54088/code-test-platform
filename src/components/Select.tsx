@@ -7,7 +7,7 @@ import { SelectProps } from '../interfaces';
 
 
 const Select: React.FC<SelectProps> = (props) => {
-
+    console.log(props.data)
     const [data, setData] = useState<Object[]>(props.data);
 
     const [isfocus, setIsfocus] = useState(false);
@@ -116,7 +116,7 @@ const OuterContainer = styled.div`
     flex-direction: column;  
 `;
 
-const SelectContainer = styled.div`
+const SelectContainer = styled.div.attrs({ 'aria-label': 'select-container' })`
     width: 260px;
     background-color: transparent;
     magin-top: 8rem;
@@ -145,7 +145,7 @@ const UnFocusText = styled.div`
 }
 `;
 
-const Input = styled.input.attrs({ placeholder: "Search" })`
+const Input = styled.input.attrs({ placeholder: "Search",'aria-label': 'country-search' })`
     width: 100%;
     border:0;
     font-weight: 500;
@@ -156,7 +156,11 @@ const Input = styled.input.attrs({ placeholder: "Search" })`
     }
 `;
 
-const List = styled.div<ListProps>`
+const List = styled.div.attrs<ListProps>(
+    ({ isFocus }) => ({
+        'aria-label': 'List'
+    })
+  )<ListProps>`
     width: 260px;
     border-radius: 5px;
     display:${props => props.isFocus ? "block" : "none"};
@@ -180,7 +184,7 @@ const Item = styled.div.attrs<any>(props => ({
     }
 `;
 
-const ItemText = styled.span`
+const ItemText = styled.span.attrs({ 'aria-label': 'country-name' })`
     text-overflow:ellipsis;
     overflow: hidden;
     white-space: nowrap;
