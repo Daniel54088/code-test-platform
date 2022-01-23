@@ -28,6 +28,7 @@
     "redux": "^4.0.0",
     "redux-observable": "2.0.0",
     "rxjs": "7.5.2",
+    "serve": "^13.0.2",
     "styled-components": "^5.3.3",
     "typescript": "^4.5.4",
     "web-vitals": "^2.1.2",
@@ -38,7 +39,7 @@
   },
   "scripts": {
     "start": "node --max_old_space_size=2048 node_modules/.bin/react-scripts start",
-    "build": "node --max_old_space_size=2048 node_modules/.bin/react-scripts build",
+    "build": "node --max_old_space_size=2048 node_modules/.bin/serve -s build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
   },
