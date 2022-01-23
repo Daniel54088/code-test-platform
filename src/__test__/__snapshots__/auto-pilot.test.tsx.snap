@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Select /> matches snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-bdvvtL iHzIin"
+    >
+      <span
+        class="fi fi-gr"
+      />
+      <div
+        aria-label="select-container"
+        class="sc-gsDKAQ fVdBuD"
+      >
+        <div
+          class="sc-dkPtRN iIDBAs"
+        >
+          <div
+            class="sc-hKwDye GGwNJ"
+          >
+            <div
+              class="sc-eCImPb htOSmG"
+            >
+              Select
+            </div>
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="KeyboardArrowDownIcon"
+              focusable="false"
+              style="fill: #697689;"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M7.41 8.59 12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z"
+              />
+            </svg>
+          </div>
+        </div>
+      </div>
+      <div
+        aria-label="List"
+        class="sc-gKclnd gSctZj"
+      >
+        <div
+          class="sc-iCfMLu ehtORy"
+        >
+          <span
+            style="padding-right: 1rem;"
+          >
+            🇵🇬
+          </span>
+          <span
+            aria-label="country-name"
+            class="sc-furwcr lbChbg"
+          >
+            Papua New Guinea
+          </span>
+        </div>
+        <div
+          class="sc-iCfMLu ehtORy"
+        >
+          <span
+            style="padding-right: 1rem;"
+          >
+            🇱🇹
+          </span>
+          <span
+            aria-label="country-name"
+            class="sc-furwcr lbChbg"
+          >
+            Lithuania
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+`;
