@@ -1,8 +1,8 @@
-# Auto-Pilot Coding
+# Auto-Pilot Coding Test
 
 
 <p align="center">
-	<h1 align="center">Auto-Pilot</h1>
+	<h1 align="center"Auto-Pilot Coding Test</h1>
 </p>
 
 <p align="center">
