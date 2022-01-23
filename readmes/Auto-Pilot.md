@@ -1,19 +1,14 @@
-# nine-web-service
+# Auto-Pilot Coding
 
 
 <p align="center">
-	<h1 align="center">Nine Web Service</h1>
+	<h1 align="center">Auto-Pilot</h1>
 </p>
 
 <p align="center">
-  <a href="https://github.com/nodejs/node"  alt="node js">
-    <img src="https://img.shields.io/badge/node.js-6DA55F?style=for-the-badge&logo=node.js&logoColor=white" alt="node js">
-  </a>
+
   <a href="https://github.com/facebook/react"  alt="react">
     <img src="https://img.shields.io/badge/react-%2320232a.svg?style=for-the-badge&logo=react&logoColor=%2361DAFB" alt="react">
-  </a>
-  <a href="https://dashboard.heroku.com/"  alt="heroku">
-    <img src="https://img.shields.io/badge/heroku-%23430098.svg?style=for-the-badge&logo=heroku&logoColor=white" alt="heroku">
   </a>
 </p>
 
@@ -32,67 +27,54 @@ yarn
 **Start local server**
 
 ```sh
-yarn dev
+yarn start
+```
+
+**Quick test**
+
+```sh
+yarn test
 ```
 
 ## Quick Demo
 
-  <a href="https://nine-web-service-1.herokuapp.com/"  alt="react">https://nine-web-service-1.herokuapp.com/</a>
+  <a href="https://elegant-turing-04650b.netlify.app/auto-pilot">https://elegant-turing-04650b.netlify.app/auto-pilot</a>
 
 
 ## Features
 
 ### Basic Overview
 
-Importing the json url or json format contents to get the filtered data.
+Click selection to select countries.
 
-<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/overview.png">
-
-
-### Expected Response
-If the json url or json format conent is correct, the Output Result area will return the filtered response.
-
-<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/positive.png">
+<img width=95% src="https://github.com/Daniel54088/code-test-platform/blob/main/media/overview.png">
 
 
-### Error Handling
-If the json url or json format conent is wrong, the Output Result area will return the error response.
+### Search Country
+Type text in the input to quick searching.
 
-<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/error.png">
+<img width=95% src="https://github.com/Daniel54088/code-test-platform/blob/main/media/search.png">
 
-
-### Data filtering
-
-filterPayload function will return the filtered data. The rule will be
-1. DRM enabled (drm: true)
-2.  at least one episode (episodeCount > 0)
-
-```js
-export const filterPayload = dataPayload => {
-    // return the ones with DRM enabled (drm: true) and at least one episode (episodeCount > 0).
-    let filteredContent = [];
-    return filteredContent = dataPayload.payload
-      .filter(item => item.drm === true)
-      .filter(item => item.episodeCount > 0);
-  };
-```
 
 <sub>[⇧ back to top](#contents)</sub>
 
 
 ## Deployment
 
-### Testing code (Jest)
-- Component UI testing, making sure the element render successfully. 
-- Test filtering function works as expected.
+### Testing code (Jest, React-test-library)
+
+- Matches snapshot
+- Shows `Select` text in the selection in the beginning.
+- List will display none before click and display block after click.
+- Country items will render successfully after clicking.
+- Search Country works.
 
 
-### CI / CD  (Travis & Heroku)
-When merge the latest code to github main branch, It will automatically integration the code and deploy on the Heroku server 
+### CI / CD  (Netlify)
+When merge the latest code to github main branch, It will automatically integration the code and deploy on the Netlify server 
 
-<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/travis.png">
 
-<img width=95% src="https://github.com/Daniel54088/nine-web-service/blob/main/media/heroku.png">
+<img width=95% src="https://github.com/Daniel54088/code-test-platform/blob/main/media/netlify.png">
 
 
 
@@ -101,8 +83,8 @@ When merge the latest code to github main branch, It will automatically integrat
 
 ## Future plans
 
-1. <a href="https://github.com/Daniel54088/nine-web-service/issues/4"  alt="docker">Add Docker in the app</a> 
-2. <a href="https://github.com/Daniel54088/nine-web-service/issues/6"  alt="sentry">Add Sentry in the app</a>
+1. Add Docker file in the app.
+2. Add Sentry in the app.
 3. Add redux testing code.
 
 
