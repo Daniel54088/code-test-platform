@@ -8,6 +8,10 @@ export interface CaptionProps {
     isFocus: boolean
 }
 
+export interface ItemBlockProps {
+    mobileShows ?: boolean
+}
+
 export interface ListProps {
     isFocus: boolean
 }
@@ -39,14 +43,14 @@ export interface ItemsProps{
         status: String,
         premium: Number
         premium_formatted: String,
-        payment_date: String,
-        coverage_start_date: String,
-        coverage_end_date: String | null,
+        payment_date: string,
+        coverage_start_date: string,
+        coverage_end_date: string,
         renewal: String| null,
         partner: {
           id: String,
           name: String,
-          logo: String,
+          logo: string,
         }
     }
  
