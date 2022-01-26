@@ -8,8 +8,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 
 const Items: React.FC<ItemsProps> = (props) => {
 
-    const windowWidth = window.innerWidth;
-
     const [clicked, handleClick] = useState(false);
     return (
         <Item>
@@ -131,7 +129,7 @@ const ItemDetail = styled.div`
     }
 `;
 
-const FullLogo = styled.div`
+const FullLogo = styled.div.attrs({ 'aria-label': 'full-logo' })`
     width: 20%;
     display: flex;
     justify-content: center;
@@ -156,7 +154,7 @@ const ItemButtonArea = styled.div`
     }   
 `;
 
-const ButtonBorder = styled.div`
+const ButtonBorder = styled.div.attrs({ 'aria-label': 'button' })`
     width: 48px;
     height: 48px;
     border: 2px solid #FFD200;
@@ -172,7 +170,7 @@ const ButtonBorder = styled.div`
 
 `;
 
-const ButtonBorderClicked = styled.div`
+const ButtonBorderClicked = styled.div.attrs({ 'aria-label': 'clicked-button' })`
     width: 48px;
     height: 48px;
     border: 2px solid #FFD200;
@@ -189,7 +187,7 @@ const ButtonBorderClicked = styled.div`
 `;
 
 
-const ItemTitleArea = styled.div`
+const ItemTitleArea = styled.div.attrs({ 'aria-label': 'title-area' })`
     width: 90%;
     border-bottom: 2px solid #E0E4E8;
     padding-bottom: 20px;
@@ -236,7 +234,11 @@ const ItemDescriptionText = styled.div`
     }
 `;
 
-const ItemBlock = styled.div<ItemBlockProps>`
+const ItemBlock = styled.div.attrs<ItemBlockProps>(
+    ({  }) => ({
+        'aria-label': 'item-block'
+    })
+  )<ItemBlockProps>`
     padding: 15px;
     &:before {
         content : "";

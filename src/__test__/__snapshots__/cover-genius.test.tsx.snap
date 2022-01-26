@@ -1,0 +1,136 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Items /> matches snapshot 1`] = `
+<body>
+  <div>
+    <div
+      class="sc-bdvvtL dDAyCc"
+    >
+      <div
+        class="sc-gsDKAQ dZzKlp"
+      >
+        <div
+          class="sc-hKwDye dRHQYv"
+        >
+          <div
+            aria-label="button"
+            class="sc-eCImPb jnqXPd"
+          >
+            <svg
+              aria-hidden="true"
+              class="MuiSvgIcon-root MuiSvgIcon-fontSizeMedium css-i4bv87-MuiSvgIcon-root"
+              data-testid="NavigateNextIcon"
+              focusable="false"
+              viewBox="0 0 24 24"
+            >
+              <path
+                d="M10 6 8.59 7.41 13.17 12l-4.58 4.59L10 18l6-6z"
+              />
+            </svg>
+          </div>
+        </div>
+        <div
+          aria-label="title-area"
+          class="sc-gKclnd fvDSOG"
+        >
+          <div>
+            <div
+              class="sc-iCfMLu dNNagR"
+            >
+              London to Paris
+            </div>
+            <div
+              class="sc-furwcr fmmRao"
+            >
+              TRAVEL-COVER-INS
+               | 
+              Baggage Cover; Medical Cover; Cancellation Cover
+               
+            </div>
+          </div>
+          <div
+            class="sc-crHmcD gxgNqW"
+          >
+              
+            <img
+              src="https://s3-ap-southeast-2.amazonaws.com/cg-frontend-tests/labore.svg"
+              style="width: 100%;"
+            />
+             
+          </div>
+        </div>
+        <div
+          aria-label="item-block"
+          class="sc-pVTFL evGKuA"
+        >
+          <div
+            class="sc-jrQzAO enDOMz"
+          >
+            10-Oct-2019
+          </div>
+          <div
+            class="sc-kDTinF cCJqRp"
+          >
+            Payment date
+          </div>
+        </div>
+        <div
+          class="sc-iqseJM eZXJFy"
+        />
+        <div
+          aria-label="item-block"
+          class="sc-pVTFL ecqzjf"
+        >
+          <div
+            class="sc-jrQzAO enDOMz"
+          >
+            17-Nov-2019
+             to 
+            19-Nov-2019
+          </div>
+          <div
+            class="sc-kDTinF cCJqRp"
+          >
+            Coverage dates
+          </div>
+        </div>
+        <div
+          class="sc-iqseJM eZXJFy"
+        />
+        <div
+          aria-label="item-block"
+          class="sc-pVTFL evGKuA"
+        >
+          <div
+            class="sc-jrQzAO enDOMz"
+          >
+            AUD $106.65
+          </div>
+          <div
+            class="sc-kDTinF cCJqRp"
+          >
+            Price/Premium
+          </div>
+        </div>
+        <div
+          class="sc-egiyK gDumpy"
+        >
+          <img
+            src="https://s3-ap-southeast-2.amazonaws.com/cg-frontend-tests/labore.svg"
+            style="width: 100%;"
+          />
+        </div>
+      </div>
+      <div
+        aria-label="full-logo"
+        class="sc-dkPtRN ipSnZw"
+      >
+        
+        <img
+          src="https://s3-ap-southeast-2.amazonaws.com/cg-frontend-tests/labore.svg"
+        />
+      </div>
+    </div>
+  </div>
+</body>
+`;
