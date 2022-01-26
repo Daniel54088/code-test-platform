@@ -7,7 +7,7 @@ import { SelectProps } from '../interfaces';
 
 
 const Select: React.FC<SelectProps> = (props) => {
-    console.log(props.data)
+    
     const [data, setData] = useState<Object[]>(props.data);
 
     const [isfocus, setIsfocus] = useState(false);
