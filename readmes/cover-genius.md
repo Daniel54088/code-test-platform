@@ -48,16 +48,19 @@ yarn test
 
 ## Features
 
-### Basic Overview
+### LapTop view 
 
 Shows the orders list under the `laptop` media screen
 
 <img width=95% src="https://github.com/Daniel54088/code-test-platform/blob/cover-genius/media/laptop.png">
 
+### Tablet view (ipad Air)
 
 Shows the orders list under the `tablet` media screen
 
 <img width=95% src="https://github.com/Daniel54088/code-test-platform/blob/cover-genius/media/tablet.png">
+
+### Mmobile view (iphone XR)
 
 Shows the orders list under the `mobile` media screen
 
